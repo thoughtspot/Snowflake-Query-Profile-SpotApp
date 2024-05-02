@@ -226,10 +226,10 @@ CREATE OR REPLACE TASK query_stats_task
             INNER JOIN "SNOWFLAKE"."ACCOUNT_USAGE".SESSIONS s ON query_stats.SESSION_ID = s.SESSION_ID
             LEFT JOIN "SNOWFLAKE"."INFORMATION_SCHEMA"."TABLES" t ON query_stats.tablename = t.TABLE_CATALOG || '.' || t.TABLE_SCHEMA || '.' || t.TABLE_NAME;
         END FOR;
-  ```
         RETURN query_id;
     END
     $$;
+  ```
 
 Execute or resume the tasks created above to start immediately.
 
