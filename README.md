@@ -125,7 +125,7 @@ CREATE OR REPLACE TABLE <database_name>.<schema_name>.query_operator_stats_cache
 
 Create an empty table to insert the query operator stats for each query id. Replace `<database_name>.<schema_name>` with the database and schema where you want to create the query stats metadata table.
 
-```sql
+```
 CREATE OR REPLACE TABLE <database_name>.<schema_name>.query_operator_stats_cache (
     QUERY_ID VARCHAR(16777216),
     QUERY_TEXT VARCHAR(16777216),
