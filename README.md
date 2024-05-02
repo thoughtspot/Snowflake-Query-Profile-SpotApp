@@ -120,10 +120,7 @@ CREATE OR REPLACE TABLE <database_name>.<schema_name>.query_operator_stats_cache
     CLUSTERING_KEY VARCHAR(16777216)
 );
 
-Here's how to format the provided content about running SQL commands for the Snowflake Query Profile SpotApp, including SQL code blocks for clarity:
 
-markdown
-Copy code
 ## Run SQL Commands
 
 Create an empty table to insert the query operator stats for each query id. Replace `<database_name>.<schema_name>` with the database and schema where you want to create the query stats metadata table.
@@ -173,10 +170,10 @@ CREATE OR REPLACE TABLE <database_name>.<schema_name>.query_operator_stats_cache
     ELAPSED_SECONDS NUMBER(38,6),
     CLUSTERING_KEY VARCHAR(16777216)
 );
-
 ```
-**Task Creation
-**Create or replace tasks to capture the id of each query which ran for more than 2 minutes and scanned more than 1 MB of data in the last 14 days. The task is scheduled to run every 60 minutes.
+
+**Task Creation**
+Create or replace tasks to capture the id of each query which ran for more than 2 minutes and scanned more than 1 MB of data in the last 14 days. The task is scheduled to run every 60 minutes.
 ```
 CREATE OR REPLACE TASK query_session_task
     WAREHOUSE = <warehouse_names>
